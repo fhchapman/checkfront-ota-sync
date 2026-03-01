@@ -1,0 +1,5 @@
+# Checkfront + Viator / Get Your Guide sync layer
+requests>=2.28.0
+python-dotenv>=1.0.0
+# Optional: for running webhook server
+flask>=2.3.0
