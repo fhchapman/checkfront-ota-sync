@@ -14,8 +14,8 @@ import sys
 import json
 import urllib.request
 
-# Default: local server. Override with env WEBHOOK_BASE_URL for ngrok.
-BASE = os.environ.get("WEBHOOK_BASE_URL", "http://localhost:5000")
+# Default: local server on 5001 (matches run_webhook_server.py). Override with env WEBHOOK_BASE_URL for ngrok.
+BASE = os.environ.get("WEBHOOK_BASE_URL", "http://localhost:5001")
 CHECKFRONT_CODE = (sys.argv[1] if len(sys.argv) > 1 else "TEST-BOOKING-CODE").strip()
 
 

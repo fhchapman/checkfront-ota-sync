@@ -80,7 +80,15 @@ Run the webhook server and expose it over HTTPS (use a tunnel or host on a serve
 python run_webhook_server.py
 ```
 
-By default it listens on port 5000. Set `PORT` in `.env` if needed.
+By default it listens on **port 5001** (on macOS, 5000 is often used by AirPlay Receiver). Set `PORT` in `.env` if you need a different port.
+
+**If using ngrok**, point it at the same port as the server (default 5001):
+
+```bash
+./ngrok http 5001
+```
+
+Use the `https://...ngrok-free.app` URL as the base for your Viator callback URLs.
 
 **Viator endpoints this app exposes:**
 

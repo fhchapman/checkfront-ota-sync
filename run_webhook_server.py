@@ -15,5 +15,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from src.webhook_server import run_server
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", "5000"))
+    # Default 5001: on macOS, port 5000 is often used by AirPlay Receiver
+    port = int(os.environ.get("PORT", "5001"))
     run_server(host="0.0.0.0", port=port)

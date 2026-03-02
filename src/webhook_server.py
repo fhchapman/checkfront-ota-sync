@@ -110,9 +110,10 @@ def health():
     return jsonify({"status": "ok"})
 
 
-def run_server(host="0.0.0.0", port=5000):
+def run_server(host="0.0.0.0", port=5001):
     app.run(host=host, port=port, debug=False)
 
 
 if __name__ == "__main__":
-    run_server(port=int(__import__("os").environ.get("PORT", "5000")))
+    port = int(__import__("os").environ.get("PORT", "5001"))
+    run_server(port=port)
