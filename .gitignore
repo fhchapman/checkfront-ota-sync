@@ -6,3 +6,4 @@ venv/
 *.csv
 !config/sample_net_amounts.csv
 ngrok
+ngrok.log
